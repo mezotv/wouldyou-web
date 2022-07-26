@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Tilt from 'react-vanilla-tilt'
 
 import PrimaryButton from "./components/primary-button";
 
@@ -31,7 +32,7 @@ const Home = (props) => {
                 <a className="home-link">
                   <img
                     alt="image"
-                    src="/playground_assets/logo-200h.png"
+                    src="/assets/logo-200h.png"
                     className="home-image"
                   />
                 </a>
@@ -75,7 +76,7 @@ const Home = (props) => {
               <div className="home-logo1">
                 <img
                   alt="image"
-                  src="/playground_assets/logo-200h.png"
+                  src="/assets/logo-200h.png"
                   className="home-image1"
                 />
               </div>
@@ -109,23 +110,23 @@ const Home = (props) => {
         <div className="home-main">
           <img
             alt="image"
-            src="/playground_assets/turquoise-circle1.svg"
+            src="/assets/turquoise-circle1.svg"
             className="home-turquoise-cirble"
           />
           <img
             alt="image"
-            src="/playground_assets/purple-circle1.svg"
+            src="/assets/purple-circle1.svg"
             loading="eager"
             className="home-purple-circle"
           />
           <img
             alt="image"
-            src="/playground_assets/left-500w.png"
+            src="/assets/left-500w.png"
             className="home-left"
           />
           <img
             alt="image"
-            src="/playground_assets/right-700w.png"
+            src="/assets/right-700w.png"
             className="home-right"
           />
           <div className="home-hero">
@@ -151,11 +152,13 @@ const Home = (props) => {
                 ></PrimaryButton>
               </a>
             </div>
+            <Tilt>
             <img
               alt="image"
-              src="/playground_assets/wouldyou1.svg"
+              src="/assets/wouldyou1.svg"
               className="home-image2"
             />
+            </Tilt>
           </div>
         </div>
         <div className="home-features">
@@ -227,7 +230,7 @@ const Home = (props) => {
             <div className="home-container07">
               <img
                 alt="image"
-                src="/playground_assets/my%20insights.svg"
+                src="/assets/my%20insights.svg"
                 loading="eager"
                 className="home-image3"
               />
@@ -239,7 +242,7 @@ const Home = (props) => {
             <div className="home-container09">
               <img
                 alt="image"
-                src="/playground_assets/logo-200h.png"
+                src="/assets/logo-200h.png"
                 className="home-image4"
               />
             </div>
@@ -604,6 +607,7 @@ const Home = (props) => {
               height: 513px;
               object-fit: cover;
               border-radius: var(--dl-radius-radius-radius8);
+              
             }
             .home-features {
               flex: 0 0 auto;

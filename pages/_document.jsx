@@ -21,7 +21,7 @@ class CustomDocument extends Document {
           ></style>
           <link
             rel="shortcut icon"
-            href="/playground_assets/logo1.png"
+            href="/assets/logo1.png"
             type="icon/png"
             sizes="32x32"
           ></link>
