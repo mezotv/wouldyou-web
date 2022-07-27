@@ -3,16 +3,22 @@ import Link from "next/link";
 import Head from "next/head";
 
 import PrimaryButton from "./components/primary-button";
-import FeatureCard from './components/feature-card'
-
+import FeatureCard from "./components/feature-card";
+import { fetchBackend } from "./js/fetchBackend";
 
 const Home = (props) => {
+  fetchBackend()
   return (
     <>
+
       <div className="home-container">
         <Head>
           <title>Would You | Discord Bot</title>
-          <link rel="icon" type="image/x-icon" href="/static/favicon.ico"></link>
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="/static/favicon.ico"
+          ></link>
           <meta
             name="description"
             content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
@@ -32,13 +38,13 @@ const Home = (props) => {
             <div className="home-logo">
               <Link href="/">
                 <a className="home-link">
-                <picture>
-                  <img
-                    alt="image"
-                    src="/assets/logo-200h.png"
-                    className="home-image"
-                  />
-                 </picture>
+                  <picture>
+                    <img
+                      alt="image"
+                      src="/assets/logo-200h.png"
+                      className="home-image"
+                    />
+                  </picture>
                 </a>
               </Link>
             </div>
@@ -78,12 +84,12 @@ const Home = (props) => {
           <div data-type="MobileMenu" className="home-mobile-menu">
             <div className="home-top">
               <div className="home-logo1">
-              <picture>
-                <img
-                  alt="image"
-                  src="/assets/logo-200h.png"
-                  className="home-image1"
-                />
+                <picture>
+                  <img
+                    alt="image"
+                    src="/assets/logo-200h.png"
+                    className="home-image1"
+                  />
                 </picture>
               </div>
               <div data-type="CloseMobileMenu" className="home-close-menu">
@@ -114,29 +120,29 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-main">
-        <picture>
-          <img
-            alt="image"
-            src="/assets/turquoise-circle1.svg"
-            className="home-turquoise-cirble"
-          />
-          <img
-            alt="image"
-            src="/assets/purple-circle1.svg"
-            loading="eager"
-            className="home-purple-circle"
-          />
-          <img
-            alt="image"
-            src="/assets/left-500w.png"
-            className="home-left"
-          />
-          <img
-            alt="image"
-            src="/assets/right-700w.png"
-            className="home-right"
-          />
-        </picture>
+          <picture>
+            <img
+              alt="image"
+              src="/assets/turquoise-circle1.svg"
+              className="home-turquoise-cirble"
+            />
+            <img
+              alt="image"
+              src="/assets/purple-circle1.svg"
+              loading="eager"
+              className="home-purple-circle"
+            />
+            <img
+              alt="image"
+              src="/assets/left-500w.png"
+              className="home-left"
+            />
+            <img
+              alt="image"
+              src="/assets/right-700w.png"
+              className="home-right"
+            />
+          </picture>
           <div className="home-hero">
             <div className="home-container02">
               <h1 className="home-text06 headline1">
@@ -161,12 +167,12 @@ const Home = (props) => {
               </a>
             </div>
             <picture>
-            <img
-              alt="image"
-              src="/assets/wouldyou1.svg"
-              className="home-image2"
-            />
-           </picture>
+              <img
+                alt="image"
+                src="/assets/wouldyou1.svg"
+                className="home-image2"
+              />
+            </picture>
           </div>
         </div>
         <div className="home-features">
@@ -207,12 +213,20 @@ const Home = (props) => {
               the world in over 100 active servers
             </span>
           </span>
-          <span className="home-text24">
-            <span className="home-text25">
-              Lorem ipsum is common placeholder text used to demonstrate the
-              graphic elements of a document or visual presentation.
-            </span>
-          </span>
+          <div className="home-features1">
+            <FeatureCard
+              title="100% Uptime"
+              image_src="/assets/up-time.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="Open Source"
+              image_src="/assets/github.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="Multiple Language Support"
+              image_src="/assets/language.svg"
+            ></FeatureCard>
+          </div>
           <div className="home-container04"></div>
         </div>
         <div className="home-c-t-a">
@@ -248,27 +262,27 @@ const Home = (props) => {
               ></a>
             </div>
             <div className="home-container07">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/my%20insights.svg"
-                loading="eager"
-                className="home-image3"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/my%20insights.svg"
+                  loading="eager"
+                  className="home-image3"
+                />
+              </picture>
             </div>
           </div>
         </div>
         <div className="home-footer">
           <footer className="home-container08">
             <div className="home-container09">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/logo-200h.png"
-                className="home-image4"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/logo-200h.png"
+                  className="home-image4"
+                />
+              </picture>
             </div>
             <div className="home-container10">
               <span>
@@ -345,5 +359,6 @@ const Home = (props) => {
     </>
   );
 };
+
 
 export default Home;
