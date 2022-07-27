@@ -3,10 +3,10 @@ import fs from 'fs';
 
 const path = '../../public/data/wouldyou.json';
 
-async function fetchBackend() {
+const fetchBackend = (props) => {
   let data;
     try {
-      await axios({
+       axios({
         method: 'post',
         url: 'https://developersdungeon.xyz/assets/json/servers.json',
         headers: {
@@ -25,4 +25,4 @@ async function fetchBackend() {
     } catch (err) {}
 }
 
-module.exports = { fetchBackend };
+export default fetchBackend;

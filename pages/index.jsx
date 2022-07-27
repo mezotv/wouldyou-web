@@ -4,10 +4,10 @@ import Head from "next/head";
 
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from "./components/feature-card";
-import { fetchBackend } from "./js/fetchBackend";
+import fetchBackend from "./js/fetchBackend";
 
 const Home = (props) => {
-  fetchBackend()
+  fetchBackend
   return (
     <>
 
