@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { motion } from "framer-motion"
 
 import PrimaryButton from "./components/primary-button";
 
@@ -102,7 +101,7 @@ const Home = (props) => {
             </a>
             <a
               className="home-text05"
-              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878294080&scope=bot%20applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
             >
               Invite
             </a>

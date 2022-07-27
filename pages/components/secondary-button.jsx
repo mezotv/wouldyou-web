@@ -45,10 +45,6 @@ const SecondaryButton = (props) => {
   )
 }
 
-SecondaryButton.defaultProps = {
-  button: 'Button',
-}
-
 SecondaryButton.propTypes = {
   button: PropTypes.string,
 }

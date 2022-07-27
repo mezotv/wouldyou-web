@@ -44,13 +44,6 @@ const FeatureCard = (props) => {
   )
 }
 
-FeatureCard.defaultProps = {
-  title: 'Title',
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.',
-  image_src: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
-  image_alt: 'image',
-}
-
 FeatureCard.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,

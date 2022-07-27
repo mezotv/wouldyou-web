@@ -1,15 +1,17 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 import PropTypes from 'prop-types'
 
 const PrimaryButton = (props) => {
   return (
     <>
-      <div className={`primary-button-container ${props.rootClassName} `}>
+      <motion.div whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }} className={`primary-button-container ${props.rootClassName} `}>
         <button className="primary-button-button mediumLabel button">
           {props.button}
         </button>
-      </div>
+      </motion.div>
       <style jsx>
         {`
           .primary-button-container {
@@ -45,11 +47,6 @@ const PrimaryButton = (props) => {
       </style>
     </>
   )
-}
-
-PrimaryButton.defaultProps = {
-  rootClassName: '',
-  button: 'Button',
 }
 
 PrimaryButton.propTypes = {
