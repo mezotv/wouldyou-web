@@ -22,7 +22,7 @@
   --dl-radius-radius-round: 50%;
   --dl-color-orange-default: #fe9a22ff;
   --dl-color-purple-default: #8c30f5ff;
-  --dl-size-size-doubleunit: 2rem;
+  --dl-size-size-doubleunit: 4rem;
   --dl-size-size-tripleunit: 3rem;
   --dl-space-space-halfunit: 0.5rem;
   --dl-radius-radius-radius2: 2px;
@@ -86,6 +86,13 @@ body {
   font-size: 72px;
   font-family: Inter;
   font-weight: 800;
+  text-transform: none;
+  text-decoration: none;
+}
+.headline5 {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
   text-transform: none;
   text-decoration: none;
 }

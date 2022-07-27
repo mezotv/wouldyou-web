@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import PrimaryButton from "./components/primary-button";
+import FeatureCard from './components/feature-card'
 
 
 const Home = (props) => {
@@ -146,7 +147,6 @@ const Home = (props) => {
                 <span className="home-text11">Discord Server</span>
                 <span className="home-text12">.</span>
               </h1>
-              <div className="button-hover">
               <a
                 href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
                 target="_blank"
@@ -159,7 +159,6 @@ const Home = (props) => {
                   className="home-component"
                 ></PrimaryButton>
               </a>
-              </div>
             </div>
             <picture>
             <img
@@ -182,8 +181,20 @@ const Home = (props) => {
             </span>
             <span className="home-text18"></span>
           </span>
-          <div className="home-features1"></div>
-          <div className="home-container03"></div>
+          <div className="home-features1">
+            <FeatureCard
+              title="24/7 Uptime"
+              image_src="/assets/up-time.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="Open Source"
+              image_src="/assets/github.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="Multiple Language Support"
+              image_src="/assets/language.svg"
+            ></FeatureCard>
+          </div>
         </div>
         <div className="home-features2">
           <h2 id="stats" className="home-text19 headline2">
