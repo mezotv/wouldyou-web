@@ -334,11 +334,11 @@ const Home = (props) => {
                 </a>
               </div>
             </div>
+            <div className="home-divider"></div>
             <span className="home-text36 body2">
               © 2022 Developers Dungeon. Would You is not affiliated with
               Discord!
             </span>
-            <div className="home-divider"></div>
           </footer>
         </div>
       </div>
