@@ -146,6 +146,7 @@ const Home = (props) => {
                 <span className="home-text11">Discord Server</span>
                 <span className="home-text12">.</span>
               </h1>
+              <div className="button-hover">
               <a
                 href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
                 target="_blank"
@@ -158,6 +159,7 @@ const Home = (props) => {
                   className="home-component"
                 ></PrimaryButton>
               </a>
+              </div>
             </div>
             <picture>
             <img

@@ -39,6 +39,7 @@ const PrimaryButton = (props) => {
           }
           .primary-button-button:hover {
             background-color: #f10404;
+            cursor: pointer  !important;
           }
           .primary-button-button:active {
             background-color: #ff0000;
