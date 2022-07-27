@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+
 import PrimaryButton from "./components/primary-button";
 
 
@@ -30,11 +31,13 @@ const Home = (props) => {
             <div className="home-logo">
               <Link href="/">
                 <a className="home-link">
+                <picture>
                   <img
                     alt="image"
                     src="/assets/logo-200h.png"
                     className="home-image"
                   />
+                 </picture>
                 </a>
               </Link>
             </div>
@@ -74,11 +77,13 @@ const Home = (props) => {
           <div data-type="MobileMenu" className="home-mobile-menu">
             <div className="home-top">
               <div className="home-logo1">
+              <picture>
                 <img
                   alt="image"
                   src="/assets/logo-200h.png"
                   className="home-image1"
                 />
+                </picture>
               </div>
               <div data-type="CloseMobileMenu" className="home-close-menu">
                 <svg viewBox="0 0 1024 1024" className="home-icon3">
@@ -108,6 +113,7 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-main">
+        <picture>
           <img
             alt="image"
             src="/assets/turquoise-circle1.svg"
@@ -129,6 +135,7 @@ const Home = (props) => {
             src="/assets/right-700w.png"
             className="home-right"
           />
+        </picture>
           <div className="home-hero">
             <div className="home-container02">
               <h1 className="home-text06 headline1">
@@ -152,11 +159,13 @@ const Home = (props) => {
                 ></PrimaryButton>
               </a>
             </div>
+            <picture>
             <img
               alt="image"
               src="/assets/wouldyou1.svg"
               className="home-image2"
             />
+           </picture>
           </div>
         </div>
         <div className="home-features">
@@ -166,7 +175,7 @@ const Home = (props) => {
           </h2>
           <span className="home-text16">
             <span className="home-text17">
-              Would you provided a bunch of features right out of the box such
+              Would You provides a bunch of features right out of the box such
               as the ones given below!
             </span>
             <span className="home-text18"></span>
@@ -226,23 +235,27 @@ const Home = (props) => {
               ></a>
             </div>
             <div className="home-container07">
+            <picture>
               <img
                 alt="image"
                 src="/assets/my%20insights.svg"
                 loading="eager"
                 className="home-image3"
               />
+            </picture>
             </div>
           </div>
         </div>
         <div className="home-footer">
           <footer className="home-container08">
             <div className="home-container09">
+            <picture>
               <img
                 alt="image"
                 src="/assets/logo-200h.png"
                 className="home-image4"
               />
+            </picture>
             </div>
             <div className="home-container10">
               <span>
