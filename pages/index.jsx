@@ -228,14 +228,17 @@ const [stats, setStats] = useState([]);
       return (
         <div className="home-features1">
         <FeatureCard
+            key={0}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-          title={wouldyoustats.users + "+" + " " + "Active Users"}
+            key={1}
+            title={wouldyoustats.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
+            key={2}
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
