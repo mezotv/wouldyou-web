@@ -207,7 +207,7 @@ const Home = (props) => {
               the world in over 100 active servers
             </span>
           </span>
-          <div className="home-container04"></div>
+          <div className="home-features1">
           <FeatureCard
               title="140+ Global Servers"
               image_src="/assets/server.svg"
@@ -220,6 +220,7 @@ const Home = (props) => {
               title="5/5 Star Rating"
               image_src="/assets/star.svg"
             ></FeatureCard>
+            </div>
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
