@@ -214,7 +214,7 @@ const Home = (props) => {
             ></FeatureCard>
             <FeatureCard
               title="170,000+ Active Users"
-              image_src="/assets/star.svg"
+              image_src="/assets/user.svg"
             ></FeatureCard>
             <FeatureCard
               title="5/5 Star Rating"
