@@ -228,6 +228,19 @@ const Home = (props) => {
             ></FeatureCard>
           </div>
           <div className="home-container04"></div>
+          <FeatureCard
+              title="140+ Global Servers"
+              image_src="/assets/server.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="170,000+ Active Users"
+              image_src="/assets/user.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="5/5 Star Rating"
+              image_src="/assets/star.svg"
+            ></FeatureCard>
+            </div>
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
