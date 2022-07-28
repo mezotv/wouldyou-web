@@ -207,13 +207,19 @@ const Home = (props) => {
               the world in over 100 active servers
             </span>
           </span>
-          <span className="home-text24">
-            <span className="home-text25">
-              Lorem ipsum is common placeholder text used to demonstrate the
-              graphic elements of a document or visual presentation.
-            </span>
-          </span>
           <div className="home-container04"></div>
+          <FeatureCard
+              title="140+ Global Servers"
+              image_src="/assets/server.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="170,000+ Active Users"
+              image_src="/assets/star.svg"
+            ></FeatureCard>
+            <FeatureCard
+              title="5/5 Star Rating"
+              image_src="/assets/star.svg"
+            ></FeatureCard>
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
