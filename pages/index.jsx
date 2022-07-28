@@ -226,8 +226,7 @@ const [stats, setStats] = useState([]);
           </span>
           {filteredStats.map(wouldyoustats => {
       return (
-        <div className="home-features1">
-          key={0}
+        <div className="home-features1" key={0}>
         <FeatureCard
             key={1}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
