@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import Link from "next/link";
 import Head from "next/head";
+import axios from "axios";
 
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from './components/feature-card'
 
-
 const Home = (props) => {
+
+const [stats, setStats] = useState([]);
+
+  let api = "https://developersdungeon.xyz/assets/json/servers.json"
+
+  useEffect(() => {
+    axios.get(api)
+    .then(res => {
+      setStats(res.data)
+    }).catch(error => console.log(error))
+  }, []);
+
+  const filteredStats = stats.filter(wouldyoustats =>
+    
+    stats.data.wouldyou
+    )
+
   return (
     <>
       <div className="home-container">
@@ -207,20 +224,25 @@ const Home = (props) => {
               the world in over 100 active servers
             </span>
           </span>
-          <div className="home-features1">
+          {filteredStats.map(wouldyoustats => {
+      return (
+        <div className="home-features1">
+        <FeatureCard
+            title={wouldyoustats.servers + "+" + " " + "Global Servers"}
+            image_src="/assets/server.svg"
+          ></FeatureCard>
           <FeatureCard
-              title="140+ Global Servers"
-              image_src="/assets/server.svg"
-            ></FeatureCard>
-            <FeatureCard
-              title="170,000+ Active Users"
-              image_src="/assets/user.svg"
-            ></FeatureCard>
-            <FeatureCard
-              title="5/5 Star Rating"
-              image_src="/assets/star.svg"
-            ></FeatureCard>
-            </div>
+          title={wouldyoustats.users + "+" + " " + "Active Users"}
+            image_src="/assets/user.svg"
+          ></FeatureCard>
+          <FeatureCard
+            title="5/5 Star Rating"
+            image_src="/assets/star.svg"
+          ></FeatureCard>
+          </div>
+      )
+    })}
+ 
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
