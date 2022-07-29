@@ -224,28 +224,29 @@ const [stats, setStats] = useState([]);
               the world in over 100 active servers
             </span>
           </span>
+          <div className="home-features1">
           {filteredStats.map(wouldyoustats => {
       return (
-        <div className="home-features1" key={0}>
+      <div>
         <FeatureCard
-            key={1}
+            key={0}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            key={2}
+            key={1}
             title={wouldyoustats.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
-            key={3}
+            key={2}
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
           </div>
       )
     })}
- 
+          </div>
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
