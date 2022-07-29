@@ -227,6 +227,7 @@ const [stats, setStats] = useState([]);
           <div className="home-features1">
           {filteredStats.map(wouldyoustats => {
       return (
+        <>
         <FeatureCard
             key={1}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
@@ -242,6 +243,7 @@ const [stats, setStats] = useState([]);
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
+          </>
       )
     })}
           </div>
