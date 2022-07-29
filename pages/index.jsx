@@ -244,6 +244,10 @@ const [stats, setStats] = useState([]);
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
+          <style jsx>
+
+            
+          </style>
           </>
         )
     })}
