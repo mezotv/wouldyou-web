@@ -227,19 +227,19 @@ const [stats, setStats] = useState([]);
           <div className="home-features1">
           {filteredStats.map(wouldyoustats => {
       return (
-      <div>
+      <div key={0} >
         <FeatureCard
-            key={0}
+            key={1}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            key={1}
+            key={2}
             title={wouldyoustats.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
-            key={2}
+            key={3}
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
