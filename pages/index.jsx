@@ -225,27 +225,19 @@ const [stats, setStats] = useState([]);
             </span>
           </span>
           <div className="home-features1">
-          {filteredStats.map(wouldyoustats => {
-            return(
-        <>
+
         <FeatureCard
-            key={1}
             title={wouldyoustats.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            key={2}
             title={wouldyoustats.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
-            key={3}
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
-          </>
-        )
-    })}
           </div>
         </div>
         <div className="home-c-t-a">
