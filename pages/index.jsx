@@ -8,7 +8,7 @@ import FeatureCard from './components/feature-card'
 
     const api = "https://developersdungeon.xyz/assets/json/servers.json"
 
-   await axios.get(api)
+    axios.get(api)
     .then(res => { return res;
     }).catch(error => console.log(error))
 
