@@ -217,11 +217,11 @@ const Home = (props, res) => {
           <div className="home-features1">
 
         <FeatureCard
-            title={res.data.wouldyou.servers + "+" + " " + "Global Servers"}
+            title={res.wouldyou.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            title={res.data.wouldyou.users + "+" + " " + "Active Users"}
+            title={res.wouldyou.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
