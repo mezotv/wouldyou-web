@@ -6,8 +6,6 @@ import axios from "axios";
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from './components/feature-card'
 
-const Home = (props) => {
-
 const [stats, setStats] = useState([]);
 
   let api = "https://developersdungeon.xyz/assets/json/servers.json"
@@ -19,10 +17,7 @@ const [stats, setStats] = useState([]);
     }).catch(error => console.log(error))
   }, []);
 
-  const filteredStats = stats.filter(wouldyoustats =>
-    
-    stats.data.wouldyou
-    )
+const Home = (props, res) => {
 
   return (
     <>
@@ -227,11 +222,11 @@ const [stats, setStats] = useState([]);
           <div className="home-features1">
 
         <FeatureCard
-            title={wouldyoustats.servers + "+" + " " + "Global Servers"}
+            title={res.data.wouldyou.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            title={wouldyoustats.users + "+" + " " + "Active Users"}
+            title={res.data.wouldyou.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
