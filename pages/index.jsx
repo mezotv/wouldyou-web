@@ -28,7 +28,7 @@ const [stats, setStats] = useState([]);
     <>
       <div className="home-container">
         <Head>
-          <title>Would You | Discord Bot</title>
+          <title>Would You | The Discord Bot</title>
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico"></link>
           <meta
             name="description"
@@ -226,6 +226,7 @@ const [stats, setStats] = useState([]);
           </span>
           <div className="home-features1">
           {filteredStats.map(wouldyoustats => {
+            console.log(wouldyoustats)
             return(
         <>
         <FeatureCard
