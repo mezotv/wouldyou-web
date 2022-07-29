@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import Link from "next/link";
 import Head from "next/head";
 import axios from "axios";
@@ -6,14 +6,24 @@ import axios from "axios";
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from './components/feature-card'
 
-    const api = "https://developersdungeon.xyz/assets/json/servers.json"
+const Home = (props) => {
 
+const [stats, setStats] = useState([]);
+
+  let api = "https://developersdungeon.xyz/assets/json/servers.json"
+
+  useEffect(() => {
     axios.get(api)
-    .then(res => { return res;
+    .then(res => {
+      setStats(res.data)
     }).catch(error => console.log(error))
+  }, []);
 
-const Home = async(props, res) => {
-console.log(res.data)
+  const filteredStats = stats.filter(wouldyoustats =>
+    
+    stats.data.wouldyou
+    )
+
   return (
     <>
       <div className="home-container">
@@ -215,19 +225,27 @@ console.log(res.data)
             </span>
           </span>
           <div className="home-features1">
-
+          {filteredStats.map(wouldyoustats => {
+            return(
+        <>
         <FeatureCard
-            title={res.data.wouldyou.servers + "+" + " " + "Global Servers"}
+            key={1}
+            title={wouldyoustats.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            title={res.data.wouldyou.users + "+" + " " + "Active Users"}
+            key={2}
+            title={wouldyoustats.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
+            key={3}
             title="5/5 Star Rating"
             image_src="/assets/star.svg"
           ></FeatureCard>
+          </>
+        )
+    })}
           </div>
         </div>
         <div className="home-c-t-a">
