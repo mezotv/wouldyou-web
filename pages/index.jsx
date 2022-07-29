@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from "react";
+import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import axios from "axios";
@@ -6,16 +6,11 @@ import axios from "axios";
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from './components/feature-card'
 
-const [stats, setStats] = useState([]);
+    const api = "https://developersdungeon.xyz/assets/json/servers.json"
 
-  let api = "https://developersdungeon.xyz/assets/json/servers.json"
-
-  useEffect(() => {
     axios.get(api)
-    .then(res => {
-      setStats(res.data)
+    .then(res => { console.log(res)
     }).catch(error => console.log(error))
-  }, []);
 
 const Home = (props, res) => {
 
