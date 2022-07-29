@@ -9,11 +9,11 @@ import FeatureCard from './components/feature-card'
     const api = "https://developersdungeon.xyz/assets/json/servers.json"
 
     axios.get(api)
-    .then(res => { console.log(res)
+    .then(res => {
     }).catch(error => console.log(error))
 
 const Home = (props, res) => {
-
+console.log(res.data)
   return (
     <>
       <div className="home-container">
@@ -217,11 +217,11 @@ const Home = (props, res) => {
           <div className="home-features1">
 
         <FeatureCard
-            title={res.wouldyou.servers + "+" + " " + "Global Servers"}
+            title={res.data.wouldyou.servers + "+" + " " + "Global Servers"}
             image_src="/assets/server.svg"
           ></FeatureCard>
           <FeatureCard
-            title={res.wouldyou.users + "+" + " " + "Active Users"}
+            title={res.data.wouldyou.users + "+" + " " + "Active Users"}
             image_src="/assets/user.svg"
           ></FeatureCard>
           <FeatureCard
