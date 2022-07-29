@@ -226,6 +226,7 @@ const [stats, setStats] = useState([]);
           </span>
           <div className="home-features1">
           {filteredStats.map(wouldyoustats => {
+            return(
         <>
         <FeatureCard
             key={1}
@@ -243,6 +244,7 @@ const [stats, setStats] = useState([]);
             image_src="/assets/star.svg"
           ></FeatureCard>
           </>
+        )
     })}
           </div>
         </div>
