@@ -21,7 +21,7 @@ const [stats, setStats] = useState([]);
 
   const filteredStats = stats.filter(wouldyoustats =>
     
-    stats.data.wouldyou
+   wouldyoustats = stats.data.wouldyou
     )
 
   return (
