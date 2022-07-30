@@ -21,6 +21,8 @@ class CustomDocument extends Document {
             property="og:image"
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/c74c7122-7b7d-4226-b811-3b50847ba79b/d0db2645-4e5c-44c7-b5c4-33bd82f3b673?org_if_sml=1"
           />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <style
             dangerouslySetInnerHTML={{
