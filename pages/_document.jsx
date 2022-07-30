@@ -6,7 +6,6 @@ class CustomDocument extends Document {
       <Html lang="en">
         <Head>
 
-        <title>Would You | The Discord Bot</title>
           <link rel="icon" type="image/x-icon" href="/static/favicon.ico"></link>
           <meta
             name="description"

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 import PrimaryButton from "./components/primary-button";
 import FeatureCard from './components/feature-card'
@@ -8,6 +9,11 @@ import FeatureCard from './components/feature-card'
 const Home = (props) => {
   return (
     <>
+    <Head>
+
+    <title>Would You | The Discord Bot</title>
+
+    </Head>
       <div className="home-container">
         <div data-role="Header" className="home-header-container">
           <header className="home-header">
