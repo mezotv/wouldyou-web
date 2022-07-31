@@ -13,7 +13,7 @@ const Home = (props) => {
     axios
       .get(api)
       .then((res) => {
-        console.log(res.data.data)
+        console.log(res.data)
         if (res?.data?.data?.wouldyou) {
           console.log(res.data.data.wouldyou);
           setStats(res.data.data.wouldyou);
