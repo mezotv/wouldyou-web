@@ -11,7 +11,7 @@ const Home = (props) => {
   let api = "https://developersdungeon.xyz/assets/json/servers.json";
   useEffect(() => {
     axios
-      .post(api)
+      .get(api)
       .then((res) => {
         if (res?.data?.data?.wouldyou) {
           console.log(res.data.data.wouldyou);
