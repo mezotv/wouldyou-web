@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import axios from "axios";
 
 import PrimaryButton from "./components/primary-button";
-import FeatureCard from './components/feature-card'
-
+import FeatureCard from "./components/feature-card";
 
 const Home = (props) => {
+  const [stats, setStats] = useState([]);
+  let api = "https://developersdungeon.xyz/assets/json/servers.json";
+  useEffect(() => {
+    axios
+      .get(api)
+      .then((res) => {
+        if (res?.data?.wouldyou) {
+          setStats(res.data.wouldyou);
+        } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
+      })
+      .catch((error) => {
+        setStats([{ servers: 150, ping: 0, users: "170,000" }]);
+      });
+  }, [api]);
+
   return (
     <>
     <Head>
@@ -15,18 +30,39 @@ const Home = (props) => {
 
     </Head>
       <div className="home-container">
+        <Head>
+          <title>Would You | The Discord Bot</title>
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="/static/favicon.ico"
+          ></link>
+          <meta
+            name="description"
+            content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
+          />
+          <meta property="og:title" content="Would You | Discord Bot" />
+          <meta
+            property="og:description"
+            content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
+          />
+          <meta
+            property="og:image"
+            content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/c74c7122-7b7d-4226-b811-3b50847ba79b/d0db2645-4e5c-44c7-b5c4-33bd82f3b673?org_if_sml=1"
+          />
+        </Head>
         <div data-role="Header" className="home-header-container">
           <header className="home-header">
             <div className="home-logo">
               <Link href="/">
                 <a className="home-link">
-                <picture>
-                  <img
-                    alt="image"
-                    src="/assets/logo-200h.png"
-                    className="home-image"
-                  />
-                 </picture>
+                  <picture>
+                    <img
+                      alt="image"
+                      src="/assets/logo-200h.png"
+                      className="home-image"
+                    />
+                  </picture>
                 </a>
               </Link>
             </div>
@@ -66,12 +102,12 @@ const Home = (props) => {
           <div data-type="MobileMenu" className="home-mobile-menu">
             <div className="home-top">
               <div className="home-logo1">
-              <picture>
-                <img
-                  alt="image"
-                  src="/assets/logo-200h.png"
-                  className="home-image1"
-                />
+                <picture>
+                  <img
+                    alt="image"
+                    src="/assets/logo-200h.png"
+                    className="home-image1"
+                  />
                 </picture>
               </div>
               <div data-type="CloseMobileMenu" className="home-close-menu">
@@ -102,29 +138,29 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-main">
-        <picture>
-          <img
-            alt="image"
-            src="/assets/turquoise-circle1.svg"
-            className="home-turquoise-cirble"
-          />
-          <img
-            alt="image"
-            src="/assets/purple-circle1.svg"
-            loading="eager"
-            className="home-purple-circle"
-          />
-          <img
-            alt="image"
-            src="/assets/left-500w.png"
-            className="home-left"
-          />
-          <img
-            alt="image"
-            src="/assets/right-700w.png"
-            className="home-right"
-          />
-        </picture>
+          <picture>
+            <img
+              alt="image"
+              src="/assets/turquoise-circle1.svg"
+              className="home-turquoise-cirble"
+            />
+            <img
+              alt="image"
+              src="/assets/purple-circle1.svg"
+              loading="eager"
+              className="home-purple-circle"
+            />
+            <img
+              alt="image"
+              src="/assets/left-500w.png"
+              className="home-left"
+            />
+            <img
+              alt="image"
+              src="/assets/right-700w.png"
+              className="home-right"
+            />
+          </picture>
           <div className="home-hero">
             <div className="home-container02">
               <h1 className="home-text06 headline1">
@@ -149,12 +185,12 @@ const Home = (props) => {
               </a>
             </div>
             <picture>
-            <img
-              alt="image"
-              src="/assets/wouldyou1.svg"
-              className="home-image2"
-            />
-           </picture>
+              <img
+                alt="image"
+                src="/assets/wouldyou1.svg"
+                className="home-image2"
+              />
+            </picture>
           </div>
         </div>
         <div className="home-features">
@@ -196,19 +232,28 @@ const Home = (props) => {
             </span>
           </span>
           <div className="home-features1">
-          <FeatureCard
-              title="140+ Global Servers"
-              image_src="/assets/server.svg"
-            ></FeatureCard>
-            <FeatureCard
-              title="170,000+ Active Users"
-              image_src="/assets/user.svg"
-            ></FeatureCard>
-            <FeatureCard
-              title="5/5 Star Rating"
-              image_src="/assets/star.svg"
-            ></FeatureCard>
-            </div>
+            {[stats].map((wouldyoustats) => {
+              return (
+                <>
+                  <FeatureCard
+                    key={1}
+                    title={wouldyoustats.servers + "+" + " " + "Global Servers"}
+                    image_src="/assets/server.svg"
+                  ></FeatureCard>
+                  <FeatureCard
+                    key={2}
+                    title={wouldyoustats.users + "+" + " " + "Active Users"}
+                    image_src="/assets/user.svg"
+                  ></FeatureCard>
+                  <FeatureCard
+                    key={3}
+                    title="5/5 Star Rating"
+                    image_src="/assets/star.svg"
+                  ></FeatureCard>
+                </>
+              );
+            })}
+          </div>
         </div>
         <div className="home-c-t-a">
           <div className="home-container05">
@@ -243,27 +288,27 @@ const Home = (props) => {
               ></a>
             </div>
             <div className="home-container07">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/my%20insights.svg"
-                loading="eager"
-                className="home-image3"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/my%20insights.svg"
+                  loading="eager"
+                  className="home-image3"
+                />
+              </picture>
             </div>
           </div>
         </div>
         <div className="home-footer">
           <footer className="home-container08">
             <div className="home-container09">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/logo-200h.png"
-                className="home-image4"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/logo-200h.png"
+                  className="home-image4"
+                />
+              </picture>
             </div>
             <div className="home-container10">
               <span>
