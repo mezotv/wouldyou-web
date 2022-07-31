@@ -14,7 +14,7 @@ const Home = (props) => {
       .get(api)
       .then((res) => {
         if (res?.data?.wouldyou) {
-          setStats(res.data);
+          setStats(res.data.wouldyou);
         } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
       })
       .catch((error) => {
@@ -232,7 +232,7 @@ const Home = (props) => {
             </span>
           </span>
           <div className="home-features1">
-            {stats.wouldyou.map((wouldyoustats) => {
+            {[stats].map((wouldyoustats) => {
               return (
                 <>
                   <FeatureCard
