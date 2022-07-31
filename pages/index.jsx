@@ -25,6 +25,11 @@ const Home = (props) => {
 
   return (
     <>
+    <Head>
+
+    <title>Would You | The Discord Bot</title>
+
+    </Head>
       <div className="home-container">
         <Head>
           <title>Would You | The Discord Bot</title>
