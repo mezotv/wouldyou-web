@@ -13,10 +13,8 @@ const Home = (props) => {
     axios
       .get(api)
       .then((res) => {
-        console.log(res.data)
-        if (res?.data?.data?.wouldyou) {
-          console.log(res.data.data.wouldyou);
-          setStats(res.data.data.wouldyou);
+        if (res?.data?.wouldyou) {
+          setStats(res.data.wouldyou);
         } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
       })
       .catch((error) => {
