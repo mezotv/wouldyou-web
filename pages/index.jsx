@@ -1,35 +1,38 @@
-import React, { useState, useEffect }  from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import axios from "axios";
 
 import PrimaryButton from "./components/primary-button";
-import FeatureCard from './components/feature-card'
+import FeatureCard from "./components/feature-card";
 
 const Home = (props) => {
-
-const [stats, setStats] = useState([]);
-
-  let api = "https://developersdungeon.xyz/assets/json/servers.json"
-
+  const [stats, setStats] = useState([]);
+  let api = "https://developersdungeon.xyz/assets/json/servers.json";
   useEffect(() => {
-    axios.get(api)
-    .then(res => {
-      setStats(res.data)
-    }).catch(error => console.log(error))
-  }, []);
-
-  const filteredStats = stats.filter(wouldyoustats =>
-    
-   wouldyoustats = stats.data.wouldyou
-    )
+    axios
+      .get(api)
+      .then((res) => {
+        if (res?.data?.data?.wouldyou) {
+          console.log(res.data.data.wouldyou);
+          setStats(res.data.data.wouldyou);
+        } else setStats([{ servers: 0, ping: 0, users: 0 }]);
+      })
+      .catch((error) => {
+        setStats([{ servers: 0, ping: 0, users: 0 }]);
+      });
+  }, [api]);
 
   return (
     <>
       <div className="home-container">
         <Head>
           <title>Would You | The Discord Bot</title>
-          <link rel="icon" type="image/x-icon" href="/static/favicon.ico"></link>
+          <link
+            rel="icon"
+            type="image/x-icon"
+            href="/static/favicon.ico"
+          ></link>
           <meta
             name="description"
             content="Would you is a fun little bot for every server! Provide your server with fun little would you questions!"
@@ -49,13 +52,13 @@ const [stats, setStats] = useState([]);
             <div className="home-logo">
               <Link href="/">
                 <a className="home-link">
-                <picture>
-                  <img
-                    alt="image"
-                    src="/assets/logo-200h.png"
-                    className="home-image"
-                  />
-                 </picture>
+                  <picture>
+                    <img
+                      alt="image"
+                      src="/assets/logo-200h.png"
+                      className="home-image"
+                    />
+                  </picture>
                 </a>
               </Link>
             </div>
@@ -95,12 +98,12 @@ const [stats, setStats] = useState([]);
           <div data-type="MobileMenu" className="home-mobile-menu">
             <div className="home-top">
               <div className="home-logo1">
-              <picture>
-                <img
-                  alt="image"
-                  src="/assets/logo-200h.png"
-                  className="home-image1"
-                />
+                <picture>
+                  <img
+                    alt="image"
+                    src="/assets/logo-200h.png"
+                    className="home-image1"
+                  />
                 </picture>
               </div>
               <div data-type="CloseMobileMenu" className="home-close-menu">
@@ -131,29 +134,29 @@ const [stats, setStats] = useState([]);
           </div>
         </div>
         <div className="home-main">
-        <picture>
-          <img
-            alt="image"
-            src="/assets/turquoise-circle1.svg"
-            className="home-turquoise-cirble"
-          />
-          <img
-            alt="image"
-            src="/assets/purple-circle1.svg"
-            loading="eager"
-            className="home-purple-circle"
-          />
-          <img
-            alt="image"
-            src="/assets/left-500w.png"
-            className="home-left"
-          />
-          <img
-            alt="image"
-            src="/assets/right-700w.png"
-            className="home-right"
-          />
-        </picture>
+          <picture>
+            <img
+              alt="image"
+              src="/assets/turquoise-circle1.svg"
+              className="home-turquoise-cirble"
+            />
+            <img
+              alt="image"
+              src="/assets/purple-circle1.svg"
+              loading="eager"
+              className="home-purple-circle"
+            />
+            <img
+              alt="image"
+              src="/assets/left-500w.png"
+              className="home-left"
+            />
+            <img
+              alt="image"
+              src="/assets/right-700w.png"
+              className="home-right"
+            />
+          </picture>
           <div className="home-hero">
             <div className="home-container02">
               <h1 className="home-text06 headline1">
@@ -178,12 +181,12 @@ const [stats, setStats] = useState([]);
               </a>
             </div>
             <picture>
-            <img
-              alt="image"
-              src="/assets/wouldyou1.svg"
-              className="home-image2"
-            />
-           </picture>
+              <img
+                alt="image"
+                src="/assets/wouldyou1.svg"
+                className="home-image2"
+              />
+            </picture>
           </div>
         </div>
         <div className="home-features">
@@ -225,28 +228,28 @@ const [stats, setStats] = useState([]);
             </span>
           </span>
           <div className="home-features1">
-          {filteredStats.map(wouldyoustats => {
-            console.log(wouldyoustats)
-            return(
-        <>
-        <FeatureCard
-            key={1}
-            title={wouldyoustats.servers + "+" + " " + "Global Servers"}
-            image_src="/assets/server.svg"
-          ></FeatureCard>
-          <FeatureCard
-            key={2}
-            title={wouldyoustats.users + "+" + " " + "Active Users"}
-            image_src="/assets/user.svg"
-          ></FeatureCard>
-          <FeatureCard
-            key={3}
-            title="5/5 Star Rating"
-            image_src="/assets/star.svg"
-          ></FeatureCard>
-          </>
-        )
-    })}
+            {stats.map((wouldyoustats) => {
+              console.log(wouldyoustats);
+              return (
+                <>
+                  <FeatureCard
+                    key={1}
+                    title={wouldyoustats.servers + "+" + " " + "Global Servers"}
+                    image_src="/assets/server.svg"
+                  ></FeatureCard>
+                  <FeatureCard
+                    key={2}
+                    title={wouldyoustats.users + "+" + " " + "Active Users"}
+                    image_src="/assets/user.svg"
+                  ></FeatureCard>
+                  <FeatureCard
+                    key={3}
+                    title="5/5 Star Rating"
+                    image_src="/assets/star.svg"
+                  ></FeatureCard>
+                </>
+              );
+            })}
           </div>
         </div>
         <div className="home-c-t-a">
@@ -282,27 +285,27 @@ const [stats, setStats] = useState([]);
               ></a>
             </div>
             <div className="home-container07">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/my%20insights.svg"
-                loading="eager"
-                className="home-image3"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/my%20insights.svg"
+                  loading="eager"
+                  className="home-image3"
+                />
+              </picture>
             </div>
           </div>
         </div>
         <div className="home-footer">
           <footer className="home-container08">
             <div className="home-container09">
-            <picture>
-              <img
-                alt="image"
-                src="/assets/logo-200h.png"
-                className="home-image4"
-              />
-            </picture>
+              <picture>
+                <img
+                  alt="image"
+                  src="/assets/logo-200h.png"
+                  className="home-image4"
+                />
+              </picture>
             </div>
             <div className="home-container10">
               <span>
