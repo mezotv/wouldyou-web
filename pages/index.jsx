@@ -232,8 +232,7 @@ const Home = (props) => {
             </span>
           </span>
           <div className="home-features1">
-            {stats.map((wouldyoustats) => {
-              console.log(wouldyoustats);
+            {stats.wouldyou.map((wouldyoustats) => {
               return (
                 <>
                   <FeatureCard
