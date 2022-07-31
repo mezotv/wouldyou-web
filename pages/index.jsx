@@ -14,7 +14,7 @@ const Home = (props) => {
       .get(api)
       .then((res) => {
         if (res?.data?.wouldyou) {
-          setStats(res.data.wouldyou);
+          setStats(res.data);
         } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
       })
       .catch((error) => {
