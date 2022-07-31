@@ -16,10 +16,10 @@ const Home = (props) => {
         if (res?.data?.data?.wouldyou) {
           console.log(res.data.data.wouldyou);
           setStats(res.data.data.wouldyou);
-        } else setStats([{ servers: 0, ping: 0, users: 0 }]);
+        } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
       })
       .catch((error) => {
-        setStats([{ servers: 0, ping: 0, users: 0 }]);
+        setStats([{ servers: 150, ping: 0, users: "170,000" }]);
       });
   }, [api]);
 
