@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import axios from "axios";
 
 import PrimaryButton from "./components/primary-button";
@@ -56,13 +57,13 @@ const Home = (props) => {
             <div className="home-logo">
               <Link href="/">
                 <a className="home-link">
-                  <picture>
-                    <img
+                    <Image
+                      width={auto}
+                      height={auto}
                       alt="image"
                       src="/assets/logo-200h.png"
                       className="home-image"
                     />
-                  </picture>
                 </a>
               </Link>
             </div>
@@ -102,13 +103,13 @@ const Home = (props) => {
           <div data-type="MobileMenu" className="home-mobile-menu">
             <div className="home-top">
               <div className="home-logo1">
-                <picture>
-                  <img
+                  <Image
+                    width={auto}
+                    height={auto}
                     alt="image"
                     src="/assets/logo-200h.png"
                     className="home-image1"
                   />
-                </picture>
               </div>
               <div data-type="CloseMobileMenu" className="home-close-menu">
                 <svg viewBox="0 0 1024 1024" className="home-icon3">
@@ -138,29 +139,35 @@ const Home = (props) => {
           </div>
         </div>
         <div className="home-main">
-          <picture>
-            <img
+            <Image
+              width={auto}
+              height={auto}
               alt="image"
               src="/assets/turquoise-circle1.svg"
               className="home-turquoise-cirble"
             />
-            <img
+            <Image
+              width={auto}
+              height={auto}
               alt="image"
               src="/assets/purple-circle1.svg"
               loading="eager"
               className="home-purple-circle"
             />
-            <img
+            <Image
+              width={auto}
+              height={auto}
               alt="image"
               src="/assets/left-500w.png"
               className="home-left"
             />
-            <img
+            <Image
+              width={auto}
+              height={auto}
               alt="image"
               src="/assets/right-700w.png"
               className="home-right"
             />
-          </picture>
           <div className="home-hero">
             <div className="home-container02">
               <h1 className="home-text06 headline1">
@@ -184,13 +191,13 @@ const Home = (props) => {
                 ></PrimaryButton>
               </a>
             </div>
-            <picture>
-              <img
+              <Image
+                width={auto}
+                height={auto}
                 alt="image"
                 src="/assets/wouldyou1.svg"
                 className="home-image2"
               />
-            </picture>
           </div>
         </div>
         <div className="home-features">
@@ -288,27 +295,27 @@ const Home = (props) => {
               ></a>
             </div>
             <div className="home-container07">
-              <picture>
-                <img
+                <Image
+                  width={auto}
+                  height={auto}
                   alt="image"
                   src="/assets/my%20insights.svg"
                   loading="eager"
                   className="home-image3"
                 />
-              </picture>
             </div>
           </div>
         </div>
         <div className="home-footer">
           <footer className="home-container08">
             <div className="home-container09">
-              <picture>
-                <img
+                <Image
+                  width={auto}
+                  height={auto}
                   alt="image"
                   src="/assets/logo-200h.png"
                   className="home-image4"
                 />
-              </picture>
             </div>
             <div className="home-container10">
               <span>

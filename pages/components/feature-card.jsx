@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import PropTypes from "prop-types";
 
@@ -6,13 +7,13 @@ const FeatureCard = (props) => {
   return (
     <>
       <div className="feature-card-container">
-        <picture>
-          <img
+          <Image
+            width={auto}
+            height={auto}
             alt={props.image_alt}
             src={props.image_src}
             className="feature-card-image"
           />
-        </picture>
         <h5 className="feature-card-text headline5">{props.title}</h5>
         <span className="feature-card-text1">{props.text}</span>
       </div>
