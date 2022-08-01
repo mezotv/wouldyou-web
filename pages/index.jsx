@@ -296,8 +296,7 @@ const Home = (props) => {
             </div>
             <div className="home-container07">
                 <Image
-                  width={auto}
-                  height={auto}
+                  layout="fill"
                   alt="image"
                   src="/assets/my%20insights.svg"
                   loading="eager"
@@ -310,8 +309,7 @@ const Home = (props) => {
           <footer className="home-container08">
             <div className="home-container09">
                 <Image
-                  width={auto}
-                  height={auto}
+                  layout="fill"
                   alt="image"
                   src="/assets/logo-200h.png"
                   className="home-image4"
