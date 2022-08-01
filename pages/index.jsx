@@ -58,8 +58,8 @@ const Home = (props) => {
               <Link href="/">
                 <a className="home-link">
                     <Image
-                      width={auto}
-                      height={auto}
+                      layout="fill"
+                      
                       alt="image"
                       src="/assets/logo-200h.png"
                       className="home-image"
@@ -104,8 +104,8 @@ const Home = (props) => {
             <div className="home-top">
               <div className="home-logo1">
                   <Image
-                    width={auto}
-                    height={auto}
+                    layout="fill"
+                    
                     alt="image"
                     src="/assets/logo-200h.png"
                     className="home-image1"
@@ -140,30 +140,30 @@ const Home = (props) => {
         </div>
         <div className="home-main">
             <Image
-              width={auto}
-              height={auto}
+              layout="fill"
+              
               alt="image"
               src="/assets/turquoise-circle1.svg"
               className="home-turquoise-cirble"
             />
             <Image
-              width={auto}
-              height={auto}
+              layout="fill"
+              
               alt="image"
               src="/assets/purple-circle1.svg"
               loading="eager"
               className="home-purple-circle"
             />
             <Image
-              width={auto}
-              height={auto}
+              layout="fill"
+              
               alt="image"
               src="/assets/left-500w.png"
               className="home-left"
             />
             <Image
-              width={auto}
-              height={auto}
+              layout="fill"
+              
               alt="image"
               src="/assets/right-700w.png"
               className="home-right"
@@ -192,8 +192,8 @@ const Home = (props) => {
               </a>
             </div>
               <Image
-                width={auto}
-                height={auto}
+                layout="fill"
+                
                 alt="image"
                 src="/assets/wouldyou1.svg"
                 className="home-image2"
