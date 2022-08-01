@@ -8,8 +8,7 @@ const FeatureCard = (props) => {
     <>
       <div className="feature-card-container">
           <Image
-            width={auto}
-            height={auto}
+            layout="fill"
             alt={props.image_alt}
             src={props.image_src}
             className="feature-card-image"
