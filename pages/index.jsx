@@ -15,10 +15,10 @@ const Home = (props) => {
       .then((res) => {
         if (res?.data?.wouldyou) {
           setStats(res.data.wouldyou);
-        } else setStats([{ servers: 150, ping: 0, users: "170,000" }]);
+        } else setStats([{ servers: 160, ping: 0, users: "170,000" }]);
       })
       .catch((error) => {
-        setStats([{ servers: 150, ping: 0, users: "170,000" }]);
+        setStats([{ servers: 160, ping: 0, users: "170,000" }]);
       });
   }, [api]);
 
@@ -26,7 +26,7 @@ const Home = (props) => {
     <>
     <Head>
 
-    <title>Would You | The Discord Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     </Head>
       <div className="home-container">
@@ -131,7 +131,7 @@ const Home = (props) => {
             </a>
             <a
               className="home-text05"
-              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878294080&scope=bot%20applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
             >
               Invite
             </a>
@@ -230,6 +230,7 @@ const Home = (props) => {
               Would You is trusted by hundreds of thousands of users all around
               the world in over 100 active servers
             </span>
+            <span className="home-text18"></span>
           </span>
           <div className="home-features1">
             {[stats].map((wouldyoustats) => {
