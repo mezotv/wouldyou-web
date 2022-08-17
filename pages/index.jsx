@@ -8,7 +8,7 @@ import FeatureCard from "./components/feature-card";
 
 const Home = (props) => {
   const [stats, setStats] = useState([]);
-  let api = "https://developersdungeon.xyz/assets/json/servers.json";
+  let api = "https://developerdungeon.com/assets/json/servers.json";
   useEffect(() => {
     axios
       .get(api)
