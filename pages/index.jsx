@@ -83,7 +83,7 @@ const Home = (props) => {
               </a>
             </div>
             <a
-              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878377024&scope=bot%20applications.commands"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link02"
@@ -131,7 +131,7 @@ const Home = (props) => {
             </a>
             <a
               className="home-text05"
-              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
+              href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878377024&scope=bot%20applications.commands"
             >
               Invite
             </a>
@@ -172,7 +172,7 @@ const Home = (props) => {
                 <span className="home-text12">.</span>
               </h1>
               <a
-                href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
+                href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878377024&scope=bot%20applications.commands"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="home-link03"
@@ -282,7 +282,7 @@ const Home = (props) => {
                 </span>
               </span>
               <a
-                href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
+                href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878377024&scope=bot%20applications.commands"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="home-link04 subtitle2"
@@ -334,7 +334,7 @@ const Home = (props) => {
             <div className="home-container11">
               <div className="home-container12">
                 <a
-                  href="https://discord.com/oauth2/authorize?client_id=981649513427111957&amp;permissions=274878294080&amp;scope=bot%20applications.commands"
+                  href="https://discord.com/oauth2/authorize?client_id=981649513427111957&permissions=274878377024&scope=bot%20applications.commands"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link05"
@@ -358,7 +358,7 @@ const Home = (props) => {
                   Discord
                 </a>
                 <a
-                  href="https://top.gg/bot/981649513427111957/vote"
+                  href="https://discord.gg/vMyXAxEznS"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link08"
