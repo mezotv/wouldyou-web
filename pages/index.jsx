@@ -187,7 +187,7 @@ const Home = (props) => {
             <picture>
               <img
                 alt="image"
-                src="/assets/wouldyou1.svg"
+                src="/assets/Wouldyou.png"
                 className="home-image2"
               />
             </picture>
@@ -292,7 +292,7 @@ const Home = (props) => {
               <picture>
                 <img
                   alt="image"
-                  src="/assets/my%20insights.svg"
+                  src="/assets/insights.png"
                   loading="eager"
                   className="home-image3"
                 />
