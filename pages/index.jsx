@@ -350,7 +350,7 @@ const Home = (props) => {
                   Github
                 </a>
                 <a
-                  href="https://discord.com/invite/KfBkKKydfg"
+                  href="https://discord.gg/vMyXAxEznS"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link07"
@@ -358,7 +358,7 @@ const Home = (props) => {
                   Discord
                 </a>
                 <a
-                  href="https://discord.gg/vMyXAxEznS"
+                  href="https://top.gg/bot/981649513427111957/vote"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="home-link08"
