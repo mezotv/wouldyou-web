@@ -19,7 +19,12 @@ module.exports = async (phase, { defaultConfig }) => {
         },
         {
           source: '/support',
-          destination: 'https://discord.gg/wouldyou',
+          destination: 'https://discord.gg/vMyXAxEznS',
+          permanent: true,
+        },
+        {
+          source: '/discord',
+          destination: 'https://discord.gg/vMyXAxEznS',
           permanent: true,
         },
       ]
