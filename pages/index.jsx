@@ -238,12 +238,12 @@ const Home = (props) => {
                 <>
                   <FeatureCard
                     key={1}
-                    title={wouldyoustats.servers + "+" + " " + "Global Servers"}
+                    title={wouldyoustats.servers ? wouldyoustats.servers + "+" + " " + "Global Servers" : "Loading..."}
                     image_src="/assets/server.svg"
                   ></FeatureCard>
                   <FeatureCard
                     key={2}
-                    title={wouldyoustats.users + "+" + " " + "Active Users"}
+                    title={wouldyoustats.users ? wouldyoustats.users + "+" + " " + "Active Users" : "Loading..."}
                     image_src="/assets/user.svg"
                   ></FeatureCard>
                   <FeatureCard
