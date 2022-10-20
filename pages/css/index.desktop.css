@@ -312,7 +312,7 @@
   font-family: Arial;
 }
 .home-text17 {
-  color: #fff;
+  color: hsla(0, 0%, 100%, 0.75);
   white-space: pre-wrap;
 }
 .home-text18 {
@@ -329,6 +329,8 @@
   align-items: flex-end;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: var(--dl-space-space-doubleunit);
+  margin-bottom: var(--dl-space-space-doubleunit);
 }
 .home-text19 {
   color: #fff;
@@ -345,6 +347,7 @@
 }
 .home-text23 {
   font-family: Arial;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 .home-text24 {
   max-width: 500px;
@@ -381,6 +384,7 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: #0498f7;
+  box-shadow: 1px -1px 37px 3px rgba(0, 0, 0, 0.2);
 }
 .home-container06 {
   flex: 1;

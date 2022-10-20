@@ -37,6 +37,7 @@ const FeatureCard = (props) => {
           .feature-card-text {
             margin-top: var(--dl-space-space-unit);
             margin-bottom: var(--dl-space-space-unit);
+            color: rgba(255, 255, 255, 0.75);
           }
           .feature-card-text1 {
             text-align: center;

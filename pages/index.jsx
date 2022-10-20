@@ -200,7 +200,7 @@ const Home = (props) => {
           </h2>
           <span className="home-text16">
             <span className="home-text17">
-              Would You provides a bunch of features right out of the box such
+              <b>Would You</b> provides a bunch of features right out of the box such
               as the ones given below!
             </span>
             <span className="home-text18"></span>
@@ -227,7 +227,7 @@ const Home = (props) => {
           </h2>
           <span className="home-text22">
             <span className="home-text23">
-              Would You is trusted by hundreds of thousands of users all around
+              <b>Would You</b> is trusted by hundreds of thousands of users all around
               the world in over 100 active servers
             </span>
             <span className="home-text18"></span>
