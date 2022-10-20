@@ -36,10 +36,12 @@ const PrimaryButton = (props) => {
             border-top-right-radius: Radius 20;
             border-bottom-left-radius: Radius 20;
             border-bottom-right-radius: Radius 20;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
           }
           .primary-button-button:hover {
             background-color: #f10404;
             cursor: pointer  !important;
+            box-shadow: 0 15px 30px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.1);
           }
           .primary-button-button:active {
             background-color: #ff0000;
