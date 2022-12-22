@@ -27,6 +27,11 @@ module.exports = async (phase, { defaultConfig }) => {
           destination: 'https://discord.gg/vMyXAxEznS',
           permanent: true,
         },
+          {
+          source: '/rony',
+          destination: 'https://discord.gg/MqdGTKYmz7',
+          permanent: true,
+        },
       ]
     },
   }
